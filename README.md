@@ -24,3 +24,5 @@ Two parts. First regression on the advertising dataset: wrote my own MAE, MSE, R
 Main things I noticed: TV budget is what really drives sales and newspaper barely matters, the model got R2 around 0.85. For diabetes both models were close (accuracy about 0.74), but the tree caught more sick people while logistic regression had a better AUC. Data is not balanced so accuracy alone can be misleading.
 
 Notebook: [Day 2 - Supervised learning practical tasks](./Day%202/Day%202%20-%20Supervised%20learning%20practical%20tasks.ipynb)
+
+Also did both optional tasks: a [decision tree regressor](./Day%202/(Optional)%20Day%202%20-%20DecisionTreeRegressor.ipynb) on advertising (beat linear regression, R2 0.94 vs 0.85) and a [regressor used as a classifier](./Day%202/(Optional)%20Day%202%20-%20DecisionTreeRegressor%20classifier.ipynb) on diabetes.
