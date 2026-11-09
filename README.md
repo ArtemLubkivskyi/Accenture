@@ -6,7 +6,7 @@ My tasks and solutions from the Accenture bootcamp. Each day has its own folder.
 |-----|-------|
 | [Day 1](./Day%201) | Data foundations |
 | [Day 2](./Day%202) | Supervised learning |
-| Day 3 | |
+| [Day 3](./Day%203) | Ensembles |
 | [Day 4](./Day%204) | Clustering and PCA |
 
 ## Day 1
@@ -26,6 +26,14 @@ Main things I noticed: TV budget is what really drives sales and newspaper barel
 Notebook: [Day 2 - Supervised learning practical tasks](./Day%202/Day%202%20-%20Supervised%20learning%20practical%20tasks.ipynb)
 
 Also did both optional tasks: a [decision tree regressor](./Day%202/(Optional)%20Day%202%20-%20DecisionTreeRegressor.ipynb) on advertising (beat linear regression, R2 0.94 vs 0.85) and a [regressor used as a classifier](./Day%202/(Optional)%20Day%202%20-%20DecisionTreeRegressor%20classifier.ipynb) on diabetes.
+
+## Day 3
+
+Tree ensembles on the breast cancer dataset: trained a decision tree, random forest and gradient boosting on the same split, tuned the random forest with grid search and 5-fold CV, then compared everything with ROC-AUC, F1, ROC curves, a confusion matrix and feature importance.
+
+Main things I noticed: all ensembles got ROC-AUC around 0.995 and the tuned random forest was best (0.996), while a single tree was clearly lower (0.976). The tree had the best F1, but the test set is small so I think that was luck. Tumour size and shape features matter the most, and the tuned forest missed only 2 of 53 malignant cases.
+
+Notebook: [Day 3 - Ensembles practical task](./Day%203/Day%203%20-%20Ensembles%20practical%20task.ipynb)
 
 ## Day 4
 
