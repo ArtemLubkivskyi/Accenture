@@ -48,6 +48,6 @@ Notebook: [Day 4 - Clustering and PCA practical tasks](./Day%204/Day4_practice.i
 
 Text preprocessing with NLTK on the author identification dataset (sentences by Lovecraft, Poe and Shelley). Wrote functions for sentence and word tokenization, stopword and punctuation removal, stemming, lemmatization, a wordcloud and the most common verbs and nouns using POS tags. Then built simple text features (token count, characters, capitals, average word length) and compared XGBoost on them with Naive Bayes and logistic regression on bag of words.
 
-Main things I noticed: stemming is fast but gives cut words like "fumbl", lemmas stay real words. The most common verbs are just forms of "be" and "have". Simple text features alone only got about 0.48 accuracy, while bag of words was much better: Naive Bayes 0.84 and logistic regression 0.81 on the test set.
+Main things I noticed: stemming is fast but gives cut words like "fumbl", lemmas stay real words. The most common verbs are just forms of "be" and "have". Simple text features alone only got about 0.48 accuracy, while bag of words was much better: Naive Bayes 0.84 and logistic regression 0.81 on the test set. Logistic regression overfits (0.98 on train), and trying TF-IDF with different C values only got it to 0.82, so Naive Bayes stayed the best.
 
 Notebook: [Day 5 - Text preprocessing pipeline](./Day%205/Text_Preprocessing_Pipeline.ipynb)
