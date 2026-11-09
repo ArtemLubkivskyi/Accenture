@@ -8,6 +8,7 @@ My tasks and solutions from the Accenture bootcamp. Each day has its own folder.
 | [Day 2](./Day%202) | Supervised learning |
 | [Day 3](./Day%203) | Ensembles |
 | [Day 4](./Day%204) | Clustering and PCA |
+| [Day 5](./Day%205) | Text preprocessing |
 
 ## Day 1
 
@@ -42,3 +43,11 @@ Two parts. First clustering on the mall customers dataset: scaled income and spe
 Main things I noticed: customers split nicely into 5 groups and both methods agreed. KMeans cuts the moons in half, DBSCAN finds them correctly because it follows density. For penguins 2 components already keep 88% of the variance, PC1 is basically body size. Predicting sex got about 80% accuracy, not great because the species are mixed together.
 
 Notebook: [Day 4 - Clustering and PCA practical tasks](./Day%204/Day4_practice.ipynb)
+
+## Day 5
+
+Text preprocessing with NLTK on the author identification dataset (sentences by Lovecraft, Poe and Shelley). Wrote functions for sentence and word tokenization, stopword and punctuation removal, stemming, lemmatization, a wordcloud and the most common verbs and nouns using POS tags. Then built simple text features (token count, characters, capitals, average word length) and compared XGBoost on them with Naive Bayes and logistic regression on bag of words.
+
+Main things I noticed: stemming is fast but gives cut words like "fumbl", lemmas stay real words. The most common verbs are just forms of "be" and "have". Simple text features alone only got about 0.48 accuracy, while bag of words was much better: Naive Bayes 0.84 and logistic regression 0.81 on the test set.
+
+Notebook: [Day 5 - Text preprocessing pipeline](./Day%205/Text_Preprocessing_Pipeline.ipynb)
