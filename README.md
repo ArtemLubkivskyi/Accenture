@@ -60,3 +60,11 @@ A small neural network written in NumPy (one tanh hidden layer, sigmoid output) 
 Main things I noticed: 1 or 2 units only draw a straight line (about 65% accuracy), from 3 units it jumps to about 90% and more units don't really help. Training 50 units for 20000 iterations instead of 5000 raised train accuracy from 92.3% to 95.7% while test stayed at 88%, so a big layer starts to overfit. 3 to 5 units look like the best choice.
 
 Notebook: [Day 6 - NN from scratch task 1](./Day%206/NN_from_scratch_task_nr_1_excercise.ipynb)
+
+### Part 2
+
+**SORRY, PART 2 IS TAKING LONGER: TRAINING IS STILL RUNNING, RESULTS COMING SOON.**
+
+A deeper NumPy network on MNIST (784 → 30 → 20 → 15 → 10, ReLU hidden layers, softmax output), trained with full batch gradient descent. Filled in forward and backward propagation, the parameter updates and the training loop, then evaluation with a confusion matrix, plots of the misclassified digits and saliency maps showing which pixels push the loss the most.
+
+Notebook: [Day 6 - NN from scratch on MNIST task 2](./Day%206/NN_From_Scratch_on_MNIST_task_nr_2_excercise.ipynb)
