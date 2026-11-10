@@ -9,6 +9,7 @@ My tasks and solutions from the Accenture bootcamp. Each day has its own folder.
 | [Day 3](./Day%203) | Ensembles |
 | [Day 4](./Day%204) | Clustering and PCA |
 | [Day 5](./Day%205) | Text preprocessing |
+| [Day 6](./Day%206) | Neural networks from scratch |
 
 ## Day 1
 
@@ -51,3 +52,11 @@ Text preprocessing with NLTK on the author identification dataset (sentences by 
 Main things I noticed: stemming is fast but gives cut words like "fumbl", lemmas stay real words. The most common verbs are just forms of "be" and "have". Simple text features alone only got about 0.48 accuracy, while bag of words was much better: Naive Bayes 0.84 and logistic regression 0.81 on the test set. Logistic regression overfits (0.98 on train), and trying TF-IDF with different C values only got it to 0.82, so Naive Bayes stayed the best.
 
 Notebook: [Day 5 - Text preprocessing pipeline](./Day%205/Text_Preprocessing_Pipeline.ipynb)
+
+## Day 6
+
+A small neural network written in NumPy (one tanh hidden layer, sigmoid output) on a 2D flower-shaped dataset. Ran the notebook, tried hidden layer sizes from 1 to 100 with 100 points kept as a test set, and trained the 50 unit network longer to check for overfitting.
+
+Main things I noticed: 1 or 2 units only draw a straight line (about 65% accuracy), from 3 units it jumps to about 90% and more units don't really help. Training 50 units for 20000 iterations instead of 5000 raised train accuracy from 92.3% to 95.7% while test stayed at 88%, so a big layer starts to overfit. 3 to 5 units look like the best choice.
+
+Notebook: [Day 6 - NN from scratch task 1](./Day%206/NN_from_scratch_task_nr_1_excercise.ipynb)
