@@ -64,8 +64,6 @@ Notebook: [Day 6 - NN from scratch task 1](./Day%206/NN_from_scratch_task_nr_1_e
 
 ### Part 2
 
-**SORRY, PART 2 IS TAKING LONGER: TRAINING IS STILL RUNNING, RESULTS COMING SOON.**
-
 A deeper NumPy network on MNIST (784 → 30 → 20 → 15 → 10, ReLU hidden layers, softmax output), trained with full batch gradient descent. Filled in forward and backward propagation, the parameter updates and the training loop, then evaluation with a confusion matrix, plots of the misclassified digits and saliency maps showing which pixels push the loss the most.
 
 Notebook: [Day 6 - NN from scratch on MNIST task 2](./Day%206/NN_From_Scratch_on_MNIST_task_nr_2_excercise.ipynb)
