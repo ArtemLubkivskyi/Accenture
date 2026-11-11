@@ -10,6 +10,7 @@ My tasks and solutions from the Accenture bootcamp. Each day has its own folder.
 | [Day 4](./Day%204) | Clustering and PCA |
 | [Day 5](./Day%205) | Text preprocessing |
 | [Day 6](./Day%206) | Neural networks from scratch |
+| [Day 7](./Day%207) | RNN, LSTM and Transformers |
 
 ## Day 1
 
@@ -68,3 +69,11 @@ Notebook: [Day 6 - NN from scratch task 1](./Day%206/NN_from_scratch_task_nr_1_e
 A deeper NumPy network on MNIST (784 → 30 → 20 → 15 → 10, ReLU hidden layers, softmax output), trained with full batch gradient descent. Filled in forward and backward propagation, the parameter updates and the training loop, then evaluation with a confusion matrix, plots of the misclassified digits and saliency maps showing which pixels push the loss the most.
 
 Notebook: [Day 6 - NN from scratch on MNIST task 2](./Day%206/NN_From_Scratch_on_MNIST_task_nr_2_excercise.ipynb)
+
+## Day 7
+
+Three sequence model labs. A SimpleRNN predicting Google's next opening price, and an LSTM predicting monthly airline passengers. For both I changed only the lookback window, picked it on validation, and ran the test once. Then Hugging Face pipelines: tokens vs words, fill-mask, a sentiment stress test and bounded text generation (sampling vs greedy). I also did the investigation part with cased BERT.
+
+Main things I noticed: the simple baselines won both time series labs. Repeating yesterday's price beat the RNN (test MAE 5.9 vs 10.6 USD), and both "last month" and "same month last year" beat the LSTM, which can't extrapolate past the training range. 12 months of history was the best LSTM window, while 6 months misses the yearly pattern. The sentiment model labels "The meeting starts at two o'clock." as POSITIVE with 0.98 confidence, because it has no neutral class. Changing "bank" to "kitchen" moves the fill-mask guess from "rates" to "once". Cased BERT keeps "Apple" and "New York" whole, but still doesn't guess the company name.
+
+Notebooks: [RNN](./Day%207/RNN_assignment.ipynb) · [LSTM](./Day%207/LSTM_assignment.ipynb) · [Transformers](./Day%207/Transformers_assignment.ipynb)
