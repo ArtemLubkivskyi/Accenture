@@ -11,6 +11,7 @@ My tasks and solutions from the Accenture bootcamp. Each day has its own folder.
 | [Day 5](./Day%205) | Text preprocessing |
 | [Day 6](./Day%206) | Neural networks from scratch |
 | [Day 7](./Day%207) | RNN, LSTM and Transformers |
+| [Day 8](./Day%208) | LLM foundations and prompting |
 
 ## Day 1
 
@@ -75,3 +76,11 @@ Three sequence model labs. A SimpleRNN predicting Google's next opening price, a
 Main things I noticed: the simple baselines won both time series labs. Repeating yesterday's price beat the RNN (test MAE 5.9 vs 10.6 USD), and both "last month" and "same month last year" beat the LSTM, which can't extrapolate past the training range. 12 months of history was the best LSTM window, while 6 months misses the yearly pattern. The sentiment model labels "The meeting starts at two o'clock." as POSITIVE with 0.98 confidence, because it has no neutral class. Changing "bank" to "kitchen" moves the fill-mask guess from "rates" to "once". Cased BERT keeps "Apple" and "New York" whole, but still doesn't guess the company name.
 
 Notebooks: [RNN](./Day%207/RNN_assignment.ipynb) · [LSTM](./Day%207/LSTM_assignment.ipynb) · [Transformers](./Day%207/Transformers_assignment.ipynb)
+
+## Day 8
+
+Calling the OpenAI API (`gpt-5.6-luna` and `gpt-5.4-mini`) and prompting. Compared the two models, then changed one setting at a time: temperature, max output tokens, top_p, frequency and presence penalty. After that system prompts, zero-shot vs few-shot, cutting input and output tokens, rewriting prompts for format, style and audience, generating and fixing code, summarizing, translating idioms to Ukrainian, a story without the letter "e", JSON extraction and prompts that copy an exact format (table, quiz, course outline).
+
+Main things I noticed: at temperature 0 two of three stories were word for word the same, at 1.5 all were different. The max tokens limit just cuts the answer, even 200 tokens stopped mid-sentence, so length is better asked for in the prompt. Low top_p gave almost the same hobby lists, "cloud shadow spotting" showed up nearly every time. Shortening the prompt went from 94 to 27 input tokens with the same quality, and the answer went from 277 to 9 output tokens. The no "e" story kept failing until I let the model reason first (`reasoning_effort="medium"`), then 3 of 3 were clean. A JSON schema gave a proper date and integer, while the prompt-only version returned "June 12th" and "5 nights" as text. Answers change on every run, so the conclusions match the saved outputs.
+
+Notebook: [Day 8 - LLM foundations practical tasks](./Day%208/Day%208%20-%20LLM%20foundations%20practical%20tasks.ipynb)
