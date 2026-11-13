@@ -12,6 +12,7 @@ My tasks and solutions from the Accenture bootcamp. Each day has its own folder.
 | [Day 6](./Day%206) | Neural networks from scratch |
 | [Day 7](./Day%207) | RNN, LSTM and Transformers |
 | [Day 8](./Day%208) | LLM foundations and prompting |
+| [Day 9](./Day%209) | Embeddings and vector search |
 
 ## Day 1
 
@@ -84,3 +85,11 @@ Calling the OpenAI API (`gpt-5.6-luna` and `gpt-5.4-mini`) and prompting. Compar
 Main things I noticed: at temperature 0 two of three stories were word for word the same, at 1.5 all were different. The max tokens limit just cuts the answer, even 200 tokens stopped mid-sentence, so length is better asked for in the prompt. Low top_p gave almost the same hobby lists, "cloud shadow spotting" showed up nearly every time. Shortening the prompt went from 94 to 27 input tokens with the same quality, and the answer went from 277 to 9 output tokens. The no "e" story kept failing until I let the model reason first (`reasoning_effort="medium"`), then 3 of 3 were clean. A JSON schema gave a proper date and integer, while the prompt-only version returned "June 12th" and "5 nights" as text. Answers change on every run, so the conclusions match the saved outputs.
 
 Notebook: [Day 8 - LLM foundations practical tasks](./Day%208/Day%208%20-%20LLM%20foundations%20practical%20tasks.ipynb)
+
+## Day 9
+
+Three parts about embeddings and vector search. First local embeddings with sentence-transformers (`paraphrase-MiniLM-L6-v2`): encoded ten sentences on different topics, compared them with `util.cos_sim`, wrote a function that ranks the sentences for any question, and my own cosine similarity in NumPy for one vector against a batch. Then a FAISS `IndexFlatL2` with 100 000 random vectors of length 768 and a search for the 5 nearest ones. Last, Pinecone: created a serverless index, made embeddings with the hosted `multilingual-e5-large` model, upserted my own sentences and searched them with a question.
+
+Main things I noticed: each sentence becomes a vector of 384 numbers. Rain vs storm got 0.245 and rain vs dog -0.087, so the topic shows even when the score is not high. "Where can I get some good food in town?" found the restaurant first (0.418) and the pancakes second, and the NumPy version gives the same numbers as `util.cos_sim`. FAISS needs float32 and a 2D query, a flat index needs no training, and the distance it returns is the squared L2 (104.43 both ways). With random data all 5 neighbours are almost equally far (104 to 106), so there is nothing really "similar" to find. In Pinecone "How can I sleep better at night?" returned three sleep tips, but the e5 scores are all very close (0.84 to 0.85), so the ranking says more than the score itself.
+
+Notebooks: [Embeddings](./Day%209/Embedding_and_Vector_Search_practical_tasks.ipynb) · [FAISS](./Day%209/FAISS_Creation_practical_tasks.ipynb) · [Pinecone](./Day%209/Pinecone_vector_database_practical_tasks_.ipynb)
