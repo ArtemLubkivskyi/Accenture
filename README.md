@@ -2,6 +2,12 @@
 
 My tasks and solutions from the Accenture bootcamp. Each day has its own folder.
 
+## About me
+
+I'm Artem Lubkivskyi, a student at SSE. I studied machine learning before the bootcamp, and what I enjoy most is taking a model out of the theory and trying it on real data to see what actually works. I joined the Accenture bootcamp to go through the whole path, from cleaning data and classic models to neural networks, LLMs and vector search. This repo is where I keep my work from each day, together with short notes on what I noticed.
+
+GitHub: [ArtemLubkivskyi](https://github.com/ArtemLubkivskyi)
+
 | Day | Topic |
 |-----|-------|
 | [Day 1](./Day%201) | Data foundations |
