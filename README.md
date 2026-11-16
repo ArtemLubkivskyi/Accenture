@@ -21,6 +21,7 @@ GitHub: [ArtemLubkivskyi](https://github.com/ArtemLubkivskyi)
 | [Day 7](./Day%207) | RNN, LSTM and Transformers |
 | [Day 8](./Day%208) | LLM foundations and prompting |
 | [Day 9](./Day%209) | Embeddings and vector search |
+| [Day 10](./Day%2010) | Advanced RAG patterns |
 
 ## Day 1
 
@@ -101,3 +102,11 @@ Three parts about embeddings and vector search. First local embeddings with sent
 Main things I noticed: each sentence becomes a vector of 384 numbers. Rain vs storm got 0.245 and rain vs dog -0.087, so the topic shows even when the score is not high. "Where can I get some good food in town?" found the restaurant first (0.418) and the pancakes second, and the NumPy version gives the same numbers as `util.cos_sim`. FAISS needs float32 and a 2D query, a flat index needs no training, and the distance it returns is the squared L2 (104.43 both ways). With random data all 5 neighbours are almost equally far (104 to 106), so there is nothing really "similar" to find. In Pinecone "How can I sleep better at night?" returned three sleep tips, but the e5 scores are all very close (0.84 to 0.85), so the ranking says more than the score itself.
 
 Notebooks: [Embeddings](./Day%209/Embedding_and_Vector_Search_practical_tasks.ipynb) · [FAISS](./Day%209/FAISS_Creation_practical_tasks.ipynb) · [Pinecone](./Day%209/Pinecone_vector_database_practical_tasks_.ipynb)
+
+## Day 10
+
+A small advanced RAG pipeline on eight short documents with built-in traps (an old and a new refund policy, X100 vs X200 warranties, the error code E-4711 and a confidential finance note). Wrote fixed-length chunking, a BM25 and a dense index, a metadata and access filter, reciprocal rank fusion for hybrid search, cross-encoder re-ranking, small-to-big parents, multi-query and HyDE search, a grounded prompt with citations, Recall@k and MRR, and timing for each stage.
+
+Main things I noticed: BM25 finds the exact code E-4711 but fails on "money back for a yearly plan", where dense search finds the refund policy. Without the filter the confidential note (60 days) came first for the refund question, with it the 2024 policy (14 days) wins. Re-ranking moved the "24 months" sentence to the top for the X200 question, but it is the slowest stage by far (about 150 ms vs about 14 ms for hybrid search). On the 6 question golden set the filter gave the biggest gain (MRR 0.92 to 1.00), but one question already changes recall by 0.17, so this set is too small to prove much.
+
+Notebook: [Day 10 - Advanced RAG patterns](./Day%2010/Advanced_RAG_Patterns.ipynb)
