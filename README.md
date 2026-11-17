@@ -12,15 +12,15 @@ GitHub: [ArtemLubkivskyi](https://github.com/ArtemLubkivskyi)
 
 | Day | Topic |
 |-----|-------|
-| [Day 1](./Day%201) | Data foundations |
-| [Day 2](./Day%202) | Supervised learning |
-| [Day 3](./Day%203) | Ensembles |
-| [Day 4](./Day%204) | Clustering and PCA |
-| [Day 5](./Day%205) | Text preprocessing |
-| [Day 6](./Day%206) | Neural networks from scratch |
-| [Day 7](./Day%207) | RNN, LSTM and Transformers |
-| [Day 8](./Day%208) | LLM foundations and prompting |
-| [Day 9](./Day%209) | Embeddings and vector search |
+| [Day 1](./Day%2001) | Data foundations |
+| [Day 2](./Day%2002) | Supervised learning |
+| [Day 3](./Day%2003) | Ensembles |
+| [Day 4](./Day%2004) | Clustering and PCA |
+| [Day 5](./Day%2005) | Text preprocessing |
+| [Day 6](./Day%2006) | Neural networks from scratch |
+| [Day 7](./Day%2007) | RNN, LSTM and Transformers |
+| [Day 8](./Day%2008) | LLM foundations and prompting |
+| [Day 9](./Day%2009) | Embeddings and vector search |
 | [Day 10](./Day%2010) | Advanced RAG patterns |
 
 ## Day 1
@@ -29,7 +29,7 @@ Worked with the red wine quality dataset: basic exploration, Min-Max scaling, co
 
 Main thing I noticed: alcohol has the strongest link to quality, and wines with more alcohol tend to get better scores.
 
-Notebook: [Day1 - Data foundations practical tasks](./Day%201/Day1%20-%20Data%20foundations%20practical%20tasks.ipynb)
+Notebook: [Day1 - Data foundations practical tasks](./Day%2001/Day1%20-%20Data%20foundations%20practical%20tasks.ipynb)
 
 ## Day 2
 
@@ -37,9 +37,9 @@ Two parts. First regression on the advertising dataset: wrote my own MAE, MSE, R
 
 Main things I noticed: TV budget is what really drives sales and newspaper barely matters, the model got R2 around 0.85. For diabetes both models were close (accuracy about 0.74), but the tree caught more sick people while logistic regression had a better AUC. Data is not balanced so accuracy alone can be misleading.
 
-Notebook: [Day 2 - Supervised learning practical tasks](./Day%202/Day%202%20-%20Supervised%20learning%20practical%20tasks.ipynb)
+Notebook: [Day 2 - Supervised learning practical tasks](./Day%2002/Day%202%20-%20Supervised%20learning%20practical%20tasks.ipynb)
 
-Also did both optional tasks: a [decision tree regressor](./Day%202/(Optional)%20Day%202%20-%20DecisionTreeRegressor.ipynb) on advertising (beat linear regression, R2 0.94 vs 0.85) and a [regressor used as a classifier](./Day%202/(Optional)%20Day%202%20-%20DecisionTreeRegressor%20classifier.ipynb) on diabetes.
+Also did both optional tasks: a [decision tree regressor](./Day%2002/(Optional)%20Day%202%20-%20DecisionTreeRegressor.ipynb) on advertising (beat linear regression, R2 0.94 vs 0.85) and a [regressor used as a classifier](./Day%2002/(Optional)%20Day%202%20-%20DecisionTreeRegressor%20classifier.ipynb) on diabetes.
 
 ## Day 3
 
@@ -47,7 +47,7 @@ Tree ensembles on the breast cancer dataset: trained a decision tree, random for
 
 Main things I noticed: all ensembles got ROC-AUC around 0.995 and the tuned random forest was best (0.996), while a single tree was clearly lower (0.976). The tree had the best F1, but the test set is small so I think that was luck. Tumour size and shape features matter the most, and the tuned forest missed only 2 of 53 malignant cases.
 
-Notebook: [Day 3 - Ensembles practical task](./Day%203/Day%203%20-%20Ensembles%20practical%20task.ipynb)
+Notebook: [Day 3 - Ensembles practical task](./Day%2003/Day%203%20-%20Ensembles%20practical%20task.ipynb)
 
 ## Day 4
 
@@ -55,7 +55,7 @@ Two parts. First clustering on the mall customers dataset: scaled income and spe
 
 Main things I noticed: customers split nicely into 5 groups and both methods agreed. KMeans cuts the moons in half, DBSCAN finds them correctly because it follows density. For penguins 2 components already keep 88% of the variance, PC1 is basically body size. Predicting sex got about 80% accuracy, not great because the species are mixed together.
 
-Notebook: [Day 4 - Clustering and PCA practical tasks](./Day%204/Day4_practice.ipynb)
+Notebook: [Day 4 - Clustering and PCA practical tasks](./Day%2004/Day4_practice.ipynb)
 
 ## Day 5
 
@@ -63,7 +63,7 @@ Text preprocessing with NLTK on the author identification dataset (sentences by 
 
 Main things I noticed: stemming is fast but gives cut words like "fumbl", lemmas stay real words. The most common verbs are just forms of "be" and "have". Simple text features alone only got about 0.48 accuracy, while bag of words was much better: Naive Bayes 0.84 and logistic regression 0.81 on the test set. Logistic regression overfits (0.98 on train), and trying TF-IDF with different C values only got it to 0.82, so Naive Bayes stayed the best.
 
-Notebook: [Day 5 - Text preprocessing pipeline](./Day%205/Text_Preprocessing_Pipeline.ipynb)
+Notebook: [Day 5 - Text preprocessing pipeline](./Day%2005/Text_Preprocessing_Pipeline.ipynb)
 
 ## Day 6
 
@@ -71,13 +71,13 @@ A small neural network written in NumPy (one tanh hidden layer, sigmoid output) 
 
 Main things I noticed: 1 or 2 units only draw a straight line (about 65% accuracy), from 3 units it jumps to about 90% and more units don't really help. Training 50 units for 20000 iterations instead of 5000 raised train accuracy from 92.3% to 95.7% while test stayed at 88%, so a big layer starts to overfit. 3 to 5 units look like the best choice.
 
-Notebook: [Day 6 - NN from scratch task 1](./Day%206/NN_from_scratch_task_nr_1_excercise.ipynb)
+Notebook: [Day 6 - NN from scratch task 1](./Day%2006/NN_from_scratch_task_nr_1_excercise.ipynb)
 
 ### Part 2
 
 A deeper NumPy network on MNIST (784 → 30 → 20 → 15 → 10, ReLU hidden layers, softmax output), trained with full batch gradient descent. Filled in forward and backward propagation, the parameter updates and the training loop, then evaluation with a confusion matrix, plots of the misclassified digits and saliency maps showing which pixels push the loss the most.
 
-Notebook: [Day 6 - NN from scratch on MNIST task 2](./Day%206/NN_From_Scratch_on_MNIST_task_nr_2_excercise.ipynb)
+Notebook: [Day 6 - NN from scratch on MNIST task 2](./Day%2006/NN_From_Scratch_on_MNIST_task_nr_2_excercise.ipynb)
 
 ## Day 7
 
@@ -85,7 +85,7 @@ Three sequence model labs. A SimpleRNN predicting Google's next opening price, a
 
 Main things I noticed: the simple baselines won both time series labs. Repeating yesterday's price beat the RNN (test MAE 5.9 vs 10.6 USD), and both "last month" and "same month last year" beat the LSTM, which can't extrapolate past the training range. 12 months of history was the best LSTM window, while 6 months misses the yearly pattern. The sentiment model labels "The meeting starts at two o'clock." as POSITIVE with 0.98 confidence, because it has no neutral class. Changing "bank" to "kitchen" moves the fill-mask guess from "rates" to "once". Cased BERT keeps "Apple" and "New York" whole, but still doesn't guess the company name.
 
-Notebooks: [RNN](./Day%207/RNN_assignment.ipynb) · [LSTM](./Day%207/LSTM_assignment.ipynb) · [Transformers](./Day%207/Transformers_assignment.ipynb)
+Notebooks: [RNN](./Day%2007/RNN_assignment.ipynb) · [LSTM](./Day%2007/LSTM_assignment.ipynb) · [Transformers](./Day%2007/Transformers_assignment.ipynb)
 
 ## Day 8
 
@@ -93,7 +93,7 @@ Calling the OpenAI API (`gpt-5.6-luna` and `gpt-5.4-mini`) and prompting. Compar
 
 Main things I noticed: at temperature 0 two of three stories were word for word the same, at 1.5 all were different. The max tokens limit just cuts the answer, even 200 tokens stopped mid-sentence, so length is better asked for in the prompt. Low top_p gave almost the same hobby lists, "cloud shadow spotting" showed up nearly every time. Shortening the prompt went from 94 to 27 input tokens with the same quality, and the answer went from 277 to 9 output tokens. The no "e" story kept failing until I let the model reason first (`reasoning_effort="medium"`), then 3 of 3 were clean. A JSON schema gave a proper date and integer, while the prompt-only version returned "June 12th" and "5 nights" as text. Answers change on every run, so the conclusions match the saved outputs.
 
-Notebook: [Day 8 - LLM foundations practical tasks](./Day%208/Day%208%20-%20LLM%20foundations%20practical%20tasks.ipynb)
+Notebook: [Day 8 - LLM foundations practical tasks](./Day%2008/Day%208%20-%20LLM%20foundations%20practical%20tasks.ipynb)
 
 ## Day 9
 
@@ -101,7 +101,7 @@ Three parts about embeddings and vector search. First local embeddings with sent
 
 Main things I noticed: each sentence becomes a vector of 384 numbers. Rain vs storm got 0.245 and rain vs dog -0.087, so the topic shows even when the score is not high. "Where can I get some good food in town?" found the restaurant first (0.418) and the pancakes second, and the NumPy version gives the same numbers as `util.cos_sim`. FAISS needs float32 and a 2D query, a flat index needs no training, and the distance it returns is the squared L2 (104.43 both ways). With random data all 5 neighbours are almost equally far (104 to 106), so there is nothing really "similar" to find. In Pinecone "How can I sleep better at night?" returned three sleep tips, but the e5 scores are all very close (0.84 to 0.85), so the ranking says more than the score itself.
 
-Notebooks: [Embeddings](./Day%209/Embedding_and_Vector_Search_practical_tasks.ipynb) · [FAISS](./Day%209/FAISS_Creation_practical_tasks.ipynb) · [Pinecone](./Day%209/Pinecone_vector_database_practical_tasks_.ipynb)
+Notebooks: [Embeddings](./Day%2009/Embedding_and_Vector_Search_practical_tasks.ipynb) · [FAISS](./Day%2009/FAISS_Creation_practical_tasks.ipynb) · [Pinecone](./Day%2009/Pinecone_vector_database_practical_tasks_.ipynb)
 
 ## Day 10
 
