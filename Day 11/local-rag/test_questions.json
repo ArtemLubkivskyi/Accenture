@@ -1,0 +1,173 @@
+[
+  {
+    "id": "q01",
+    "question": "How many days of paid time off do full-time employees get per year?",
+    "expected_answer": "Full-time employees get 25 days of paid time off per calendar year, in addition to public holidays at their office location. Part-time employees get PTO pro rata.",
+    "source_document": "company_handbook.pdf",
+    "evidence": [{"source": "company_handbook.pdf", "page": 5}],
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q02",
+    "question": "What is the maximum nightly hotel rate for international business travel?",
+    "expected_answer": "EUR 200 per night for international travel (EUR 150 for domestic). Exceptions for high-cost cities such as London, San Francisco or Zurich can be approved by Finance case by case.",
+    "source_document": "company_handbook.pdf",
+    "evidence": [{"source": "company_handbook.pdf", "page": 7}],
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q03",
+    "question": "What uptime SLA does the Enterprise tier have?",
+    "expected_answer": "99.95% uptime, which is about 21 minutes of maximum monthly downtime, measured per calendar month.",
+    "source_document": "product_guide.pdf",
+    "evidence": [{"source": "product_guide.pdf", "page": 14}],
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q04",
+    "question": "How quickly must a P1 critical security incident be acknowledged?",
+    "expected_answer": "Within 15 minutes of detection. The full Incident Response Team must be assembled within 30 minutes and the CEO, General Counsel and Board Security Committee notified within 1 hour.",
+    "source_document": "security_policy.pdf",
+    "evidence": [{"source": "security_policy.pdf", "page": 6}],
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q05",
+    "question": "What was NovaTech's annual recurring revenue at the end of Q1 2026?",
+    "expected_answer": "EUR 18.2 million, a 23% year-over-year increase from EUR 14.8 million at the end of Q1 2025.",
+    "source_document": "quarterly_report_q1_2026.pdf",
+    "evidence": [{"source": "quarterly_report_q1_2026.pdf", "page": 1}],
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q06",
+    "question": "Which CRM did the leadership team choose to replace Pipedrive?",
+    "expected_answer": "HubSpot Enterprise, decided at the February 12, 2026 meeting (3-year TCO EUR 385K), with a target go-live of April 15. Salesforce and Freshsales were rejected.",
+    "source_document": "meeting_notes.pdf",
+    "evidence": [{"source": "meeting_notes.pdf", "page": 5}],
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q07",
+    "question": "Compare the Professional and Enterprise support tiers.",
+    "expected_answer": "Professional has support during extended business hours (06:00-22:00 CET, Monday to Friday), email support, live chat during business hours, and a 1 hour response time for critical issues. Enterprise has 24/7 support including live chat and phone, a dedicated support manager, and a 15 minute response time for critical issues.",
+    "source_document": "product_guide.pdf",
+    "evidence": [{"source": "product_guide.pdf", "page": 14}, {"source": "product_guide.pdf", "page": 28}],
+    "difficulty": "medium",
+    "type": "comparison"
+  },
+  {
+    "id": "q08",
+    "question": "How much does the Professional bundle of ProjectHub and Insight cost per user per month, and how much does it save compared to buying both products separately?",
+    "expected_answer": "EUR 134 per user per month billed monthly instead of EUR 158 (2 x EUR 79), so EUR 24 less, which is the 15% bundle discount. Billed annually the bundle is EUR 112 per user per month.",
+    "source_document": "product_guide.pdf",
+    "evidence": [{"source": "product_guide.pdf", "page": 10}, {"source": "product_guide.pdf", "page": 11}],
+    "difficulty": "medium",
+    "type": "calculation"
+  },
+  {
+    "id": "q09",
+    "question": "Which Enterprise accounts are at risk of not renewing, and how much ARR is at risk in total?",
+    "expected_answer": "Gruber Manufacturing (EUR 178K, renewal June 2026, sponsor left and new CTO evaluating alternatives), Rheinland Utilities AG (EUR 148K, July 2026, budget pressure and possible downgrade) and Alpen Logistics (EUR 94K, May 2026, low adoption at 32% seat utilization). Total at-risk ARR is EUR 420K, 2.3% of total ARR.",
+    "source_document": "quarterly_report_q1_2026.pdf",
+    "evidence": [{"source": "quarterly_report_q1_2026.pdf", "page": 10}],
+    "difficulty": "medium",
+    "type": "synthesis"
+  },
+  {
+    "id": "q10",
+    "question": "What must an employee do if their company laptop is lost, and how would the security team classify the incident?",
+    "expected_answer": "The handbook says lost or stolen devices must be reported to IT within 4 hours via the IT emergency hotline (+49 89 555 0199) or it-security@novatech-solutions.com. The security policy classifies a lost laptop with full-disk encryption as a P4 (Low) incident, which must be acknowledged within 24 hours.",
+    "source_document": "company_handbook.pdf, security_policy.pdf",
+    "evidence": [{"source": "company_handbook.pdf", "page": 14}, {"source": "security_policy.pdf", "page": 7}],
+    "difficulty": "medium",
+    "type": "multi_document"
+  },
+  {
+    "id": "q11",
+    "question": "What are the four data classification levels and which TLS version is required in transit for each?",
+    "expected_answer": "Public: TLS 1.2+. Internal: TLS 1.2+. Confidential: TLS 1.3. Restricted: TLS 1.3.",
+    "source_document": "security_policy.pdf",
+    "evidence": [{"source": "security_policy.pdf", "page": 2}, {"source": "security_policy.pdf", "page": 3}],
+    "difficulty": "medium",
+    "type": "table"
+  },
+  {
+    "id": "q12",
+    "question": "How many days per week can employees work remotely?",
+    "expected_answer": "The handbook (v4.2, January 2026) allows up to 3 remote days per week with manager approval (1 day during probation). At the March 5, 2026 leadership meeting this was changed to up to 4 remote days per week effective Q3 2026, with Tuesday as the mandatory office day; department heads may require up to 2 office days (Sales keeps Tuesday and Thursday).",
+    "source_document": "company_handbook.pdf, meeting_notes.pdf",
+    "evidence": [{"source": "company_handbook.pdf", "page": 4}, {"source": "meeting_notes.pdf", "page": 6}, {"source": "meeting_notes.pdf", "page": 7}],
+    "difficulty": "hard",
+    "type": "conflicting_sources"
+  },
+  {
+    "id": "q13",
+    "question": "How often do employees have to change their password?",
+    "expected_answer": "The handbook says every 90 days (minimum 14 characters). On March 5, 2026 leadership extended rotation to 180 days for employee user accounts, effective immediately, with 16+ character passwords; infrastructure credentials stay on 90-day rotation.",
+    "source_document": "company_handbook.pdf, meeting_notes.pdf",
+    "evidence": [{"source": "company_handbook.pdf", "page": 14}, {"source": "meeting_notes.pdf", "page": 7}, {"source": "meeting_notes.pdf", "page": 8}],
+    "difficulty": "hard",
+    "type": "conflicting_sources"
+  },
+  {
+    "id": "q14",
+    "question": "What is the price of the Professional tier per user per month?",
+    "expected_answer": "The product guide lists Professional at EUR 79 per user per month (EUR 66 billed annually) per product. The February 12 meeting notes quote a current Professional price of EUR 59, which conflicts with the product guide; the product guide is the official price list.",
+    "source_document": "product_guide.pdf, meeting_notes.pdf",
+    "evidence": [{"source": "product_guide.pdf", "page": 10}, {"source": "meeting_notes.pdf", "page": 4}],
+    "difficulty": "hard",
+    "type": "conflicting_sources"
+  },
+  {
+    "id": "q15",
+    "question": "When did the Lisbon office open and how many people work there?",
+    "expected_answer": "The Q1 2026 report says it opened on January 15, 2026 with 22 staff (18 engineering, 4 product and design). The meeting notes instead say occupancy starts April 1 and first employees are expected on site April 14 because of permit delays, so the documents disagree on the date.",
+    "source_document": "quarterly_report_q1_2026.pdf, meeting_notes.pdf",
+    "evidence": [{"source": "quarterly_report_q1_2026.pdf", "page": 9}, {"source": "meeting_notes.pdf", "page": 2}, {"source": "meeting_notes.pdf", "page": 9}],
+    "difficulty": "hard",
+    "type": "conflicting_sources"
+  },
+  {
+    "id": "q16",
+    "question": "A Professional customer had 99.5% uptime last month. What service credit do they get?",
+    "expected_answer": "99.5% is below the Professional SLA of 99.9% and falls in the 98.0%-99.89% band, so the credit is 10% of the monthly fee, applied to the next billing cycle. The customer must request it within 30 days.",
+    "source_document": "product_guide.pdf",
+    "evidence": [{"source": "product_guide.pdf", "page": 13}, {"source": "product_guide.pdf", "page": 14}],
+    "difficulty": "hard",
+    "type": "reasoning"
+  },
+  {
+    "id": "q17",
+    "question": "How many weeks of paid parental leave does NovaTech offer?",
+    "expected_answer": "The documents do not give a number of weeks. The handbook only says parental leave follows local statutory requirements and HR must be notified at least 8 weeks before the start.",
+    "source_document": null,
+    "evidence": [{"source": "company_handbook.pdf", "page": 6}],
+    "difficulty": "hard",
+    "type": "unanswerable"
+  },
+  {
+    "id": "q18",
+    "question": "What was NovaTech's revenue in Q2 2026?",
+    "expected_answer": "The documents do not contain Q2 2026 revenue. The latest report covers Q1 2026; the Q2 report is only scheduled for July 14, 2026.",
+    "source_document": null,
+    "evidence": [],
+    "difficulty": "medium",
+    "type": "unanswerable"
+  },
+  {
+    "id": "q19",
+    "question": "Who is the CEO of Planwise?",
+    "expected_answer": "The documents do not name Planwise's CEO. They only describe Planwise as a Series B competitor (USD 45M raised) that launched Planwise Intelligence on March 22, 2026.",
+    "source_document": null,
+    "evidence": [],
+    "difficulty": "easy",
+    "type": "unanswerable"
+  }
+]
