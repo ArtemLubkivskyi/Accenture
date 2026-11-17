@@ -52,8 +52,8 @@
     "tokens_generated": 48,
     "retrieval_time_ms": 2522,
     "generation_time_ms": 53896,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "right, 25 days"
   },
   {
     "id": "q02",
@@ -108,8 +108,8 @@
     "tokens_generated": 65,
     "retrieval_time_ms": 2122,
     "generation_time_ms": 43524,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "right, 200 EUR, also gives the domestic rate"
   },
   {
     "id": "q03",
@@ -164,8 +164,8 @@
     "tokens_generated": 91,
     "retrieval_time_ms": 2292,
     "generation_time_ms": 49286,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "right, 99.95% and about 21 min"
   },
   {
     "id": "q04",
@@ -220,8 +220,8 @@
     "tokens_generated": 19,
     "retrieval_time_ms": 2156,
     "generation_time_ms": 26872,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "right, 15 minutes"
   },
   {
     "id": "q05",
@@ -276,8 +276,8 @@
     "tokens_generated": 76,
     "retrieval_time_ms": 2152,
     "generation_time_ms": 43266,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "right, 18.2M EUR"
   },
   {
     "id": "q06",
@@ -332,8 +332,8 @@
     "tokens_generated": 86,
     "retrieval_time_ms": 2198,
     "generation_time_ms": 48592,
-    "passed": null,
-    "rating_note": ""
+    "passed": false,
+    "rating_note": "wrong, says Salesforce. The HubSpot decision page (meeting notes p5) was not retrieved, only the January recommendation"
   },
   {
     "id": "q07",
@@ -388,8 +388,8 @@
     "tokens_generated": 582,
     "retrieval_time_ms": 2167,
     "generation_time_ms": 138953,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "main points right (hours, 15 min vs 1 h, phone, manager), but adds extra things like add-on prices that were not asked"
   },
   {
     "id": "q08",
@@ -444,8 +444,8 @@
     "tokens_generated": 81,
     "retrieval_time_ms": 2305,
     "generation_time_ms": 46904,
-    "passed": null,
-    "rating_note": ""
+    "passed": false,
+    "rating_note": "price 134 EUR right, but only says 15% and never gives the saving in euro (24 EUR vs 158)"
   },
   {
     "id": "q09",
@@ -500,8 +500,8 @@
     "tokens_generated": 149,
     "retrieval_time_ms": 2143,
     "generation_time_ms": 59430,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "all three accounts and 420K total"
   },
   {
     "id": "q10",
@@ -556,8 +556,8 @@
     "tokens_generated": 141,
     "retrieval_time_ms": 2141,
     "generation_time_ms": 49855,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "both parts right: report within 4 hours and P4"
   },
   {
     "id": "q11",
@@ -612,8 +612,8 @@
     "tokens_generated": 140,
     "retrieval_time_ms": 2141,
     "generation_time_ms": 56389,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "all four levels right"
   },
   {
     "id": "q12",
@@ -668,8 +668,8 @@
     "tokens_generated": 160,
     "retrieval_time_ms": 2126,
     "generation_time_ms": 54322,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "mentions both 3 days and the new 4 days, calls the new one proposed although it was decided"
   },
   {
     "id": "q13",
@@ -724,8 +724,8 @@
     "tokens_generated": 87,
     "retrieval_time_ms": 2126,
     "generation_time_ms": 40905,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "180 days and that infrastructure stays on 90"
   },
   {
     "id": "q14",
@@ -780,8 +780,8 @@
     "tokens_generated": 200,
     "retrieval_time_ms": 2144,
     "generation_time_ms": 61114,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "79 EUR right, does not clearly flag the 59 EUR conflict"
   },
   {
     "id": "q15",
@@ -836,8 +836,8 @@
     "tokens_generated": 67,
     "retrieval_time_ms": 2142,
     "generation_time_ms": 39171,
-    "passed": null,
-    "rating_note": ""
+    "passed": false,
+    "rating_note": "only gives January 15, misses that the meeting notes say April. Both pages were retrieved"
   },
   {
     "id": "q16",
@@ -892,8 +892,8 @@
     "tokens_generated": 113,
     "retrieval_time_ms": 2151,
     "generation_time_ms": 50048,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "right band and 10%"
   },
   {
     "id": "q17",
@@ -948,8 +948,8 @@
     "tokens_generated": 47,
     "retrieval_time_ms": 2137,
     "generation_time_ms": 31809,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "correctly says no number of weeks, but says there are no details at all although the handbook says statutory rules"
   },
   {
     "id": "q18",
@@ -1004,8 +1004,8 @@
     "tokens_generated": 70,
     "retrieval_time_ms": 2115,
     "generation_time_ms": 38780,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "correctly says Q2 is not in the documents"
   },
   {
     "id": "q19",
@@ -1060,7 +1060,7 @@
     "tokens_generated": 48,
     "retrieval_time_ms": 2115,
     "generation_time_ms": 47393,
-    "passed": null,
-    "rating_note": ""
+    "passed": true,
+    "rating_note": "correctly says the CEO is not named, no made up name"
   }
 ]

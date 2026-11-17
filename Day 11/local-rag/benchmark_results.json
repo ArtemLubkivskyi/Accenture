@@ -13,8 +13,8 @@
     "completion_tokens": 69,
     "tokens_per_second": 4.2,
     "tokens_per_second_total": 3.5,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 5,
+    "rating_note": "correct and 2-3 sentences"
   },
   {
     "model": "qwen3.5:4b-q4_K_M",
@@ -30,8 +30,8 @@
     "completion_tokens": 172,
     "tokens_per_second": 4.2,
     "tokens_per_second_total": 3.8,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 5,
+    "rating_note": "80 km/h with short steps"
   },
   {
     "model": "qwen3.5:4b-q4_K_M",
@@ -47,8 +47,8 @@
     "completion_tokens": 45,
     "tokens_per_second": 4.7,
     "tokens_per_second_total": 2.6,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 4,
+    "rating_note": "one sentence and correct, leaves out the time details"
   },
   {
     "model": "qwen3.5:4b-q4_K_M",
@@ -64,8 +64,8 @@
     "completion_tokens": 52,
     "tokens_per_second": 4.8,
     "tokens_per_second_total": 3.6,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 4,
+    "rating_note": "valid JSON, but Paris 12.0M is the metro area not the city"
   },
   {
     "model": "qwen3.5:4b-q4_K_M",
@@ -81,8 +81,8 @@
     "completion_tokens": 72,
     "tokens_per_second": 4.9,
     "tokens_per_second_total": 3.7,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 4,
+    "rating_note": "works, unused import string"
   },
   {
     "model": "qwen3.5:4b-q4_K_M",
@@ -98,8 +98,8 @@
     "completion_tokens": 24,
     "tokens_per_second": 5.3,
     "tokens_per_second_total": 2.7,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 5,
+    "rating_note": "follows all format rules"
   },
   {
     "model": "qwen3.5:4b-q4_K_M",
@@ -115,8 +115,8 @@
     "completion_tokens": 55,
     "tokens_per_second": 5.3,
     "tokens_per_second_total": 3.6,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 5,
+    "rating_note": "answers from context and says dress code is missing"
   },
   {
     "model": "qwen3.5:2b-q4_K_M",
@@ -132,8 +132,8 @@
     "completion_tokens": 93,
     "tokens_per_second": 8.8,
     "tokens_per_second_total": 7.1,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 3,
+    "rating_note": "mostly right but 3+ sentences and says the Moon makes tides more frequent"
   },
   {
     "model": "qwen3.5:2b-q4_K_M",
@@ -149,8 +149,8 @@
     "completion_tokens": 220,
     "tokens_per_second": 10.7,
     "tokens_per_second_total": 9.4,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 5,
+    "rating_note": "80 km/h, correct"
   },
   {
     "model": "qwen3.5:2b-q4_K_M",
@@ -166,8 +166,8 @@
     "completion_tokens": 54,
     "tokens_per_second": 11.0,
     "tokens_per_second_total": 6.2,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 2,
+    "rating_note": "wrong fact (one week per month) and misses the 34%"
   },
   {
     "model": "qwen3.5:2b-q4_K_M",
@@ -183,8 +183,8 @@
     "completion_tokens": 69,
     "tokens_per_second": 10.7,
     "tokens_per_second_total": 7.4,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 5,
+    "rating_note": "valid JSON, numbers look fine"
   },
   {
     "model": "qwen3.5:2b-q4_K_M",
@@ -200,8 +200,8 @@
     "completion_tokens": 61,
     "tokens_per_second": 11.9,
     "tokens_per_second_total": 7.9,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 2,
+    "rating_note": "bug: does not lowercase, so it is not case-insensitive"
   },
   {
     "model": "qwen3.5:2b-q4_K_M",
@@ -217,8 +217,8 @@
     "completion_tokens": 35,
     "tokens_per_second": 12.2,
     "tokens_per_second_total": 6.2,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 5,
+    "rating_note": "follows all format rules"
   },
   {
     "model": "qwen3.5:2b-q4_K_M",
@@ -234,7 +234,7 @@
     "completion_tokens": 85,
     "tokens_per_second": 11.8,
     "tokens_per_second_total": 8.3,
-    "quality_rating": null,
-    "rating_note": ""
+    "quality_rating": 4,
+    "rating_note": "correct but wordy"
   }
 ]

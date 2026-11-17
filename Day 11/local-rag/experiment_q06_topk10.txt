@@ -1,0 +1,32 @@
+﻿Query: Which CRM did the leadership team choose to replace Pipedrive?  (5798 ms)
+
+[1] meeting_notes.pdf p.2  score=0.7336
+    | Jan 22 | | 1.5 | AI specialist job descriptions finalized | Elena | Jan 19 | 3. CRM Vendor Selection James presented the shortlist for replacing our current CRM (Pipedrive). Three vendors evaluated: Salesforce, HubSpot Enterprise, and Freshsales. James's recommendation: Salesforce. Reasoning -- be
+
+[2] meeting_notes.pdf p.1  score=0.623
+    senior engineers in Q4 2025. Marcus supported the request and noted that the AI specialists are critical for the NovaTech Copilot initiative he wants to kick off in Q2. Sales (James): Requested 8 new hires -- 5 account executives for the DACH region and 3 for the new UK expansion. James reported tha
+
+[3] meeting_notes.pdf p.1  score=0.6113
+    NovaTech Solutions -- Leadership Team Meeting Notes Document Classification: Internal -- Confidential Distribution: Leadership Team Only Note-taker: Aisha Patel, Head of HR Meeting 1: Q1 Planning & Strategic Initiatives Date: January 15, 2026 Time: 10:00 -- 12:15 CET Location: Conference Room A (Mun
+
+[4] meeting_notes.pdf p.8  score=0.6034
+    moat for regulated industries (finance, healthcare, government). Decision: NovaTech Copilot approved with a total budget of EUR 1.2M. Phased staffing: 2 ML engineers starting April, ramping to 4 by July. Marcus owns the initiative with monthly progress updates to the leadership team.
+
+[5] meeting_notes.pdf p.9  score=0.5998
+    4. Miscellaneous Updates Lisbon office update (Elena): Buildout is on track. Furniture ordered, IT infrastructure being installed week of March 10. First employees expected to start on-site April 14 (two weeks behind original April 1 target due to permit delays). Elena has been interviewing locally 
+
+[6] meeting_notes.pdf p.9  score=0.5872
+    issue: historical pipeline data from before 2024 may not migrate cleanly. James decided to archive pre-2024 data separately rather than delay the migration. Q1 revenue tracking (James): Tracking at 94% of plan as of March 1. Two large enterprise deals expected to close this month which would put us 
+
+[7] meeting_notes.pdf p.5  score=0.5835
+    4. CRM Decision (follow-up) James presented the TCO analysis as requested. After thorough evaluation: - Salesforce 3-year TCO: EUR 780K (including EUR 120K implementation) - HubSpot 3-year TCO: EUR 385K (including EUR 40K implementation) - Freshsales 3-year TCO: EUR 240K (including EUR 25K implement
+
+[8] quarterly_report_q1_2026.pdf p.1  score=0.5777
+    expansion revenue and a modest reduction in churn. The opening of our Lisbon engineering office in January proceeded on schedule and under budget, adding 22 staff members who are already contributing to the Insight product roadmap. However, the quarter was not without challenges. Three Enterprise ac
+
+[9] quarterly_report_q1_2026.pdf p.6  score=0.5768
+    Insight Real-Time Streaming Q4 2026 Planning NovaTech Copilot is an AI-powered conversational assistant designed to operate across both ProjectHub and Insight. It will enable users to query project status, generate reports, create tasks, and receive proactive recommendations through natural language
+
+[10] quarterly_report_q1_2026.pdf p.4  score=0.5756
+    based net retention of 112% reflects meaningful expansion revenue, primarily driven by seat-count growth within existing accounts and upsells to the Insight product. 3.4 Notable Customer Wins Meridian Logistics Group (Enterprise): New logo, EUR 89K ACV. Replaced a legacy project tracking tool across
+
