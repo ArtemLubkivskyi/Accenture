@@ -1,0 +1,15 @@
+[project]
+name = "local-rag"
+version = "0.1.0"
+description = "Local document Q&A (RAG) over the NovaTech PDFs with Ollama"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.5.9",
+    "langchain-text-splitters>=1.1.3",
+    "openai>=3.52.0",
+    "pypdf>=7.1.0",
+]
+
+[tool.uv]
+package = false
