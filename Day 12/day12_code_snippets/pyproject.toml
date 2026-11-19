@@ -1,0 +1,16 @@
+[project]
+name = "day12-live-materials"
+version = "0.2.0"
+description = "Day 12: AI Evaluation, live demo scripts"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "openai>=3.0",
+    "deepeval>=4.3.4",
+    "bert-score>=0.3.13",
+    "rouge-score>=0.1.2",
+    "nltk>=3.9.1",
+    "torch>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "pytest>=8.0",
+]

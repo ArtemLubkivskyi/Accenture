@@ -1,0 +1,19 @@
+﻿id    labelled                                         rank   all found
+q01   company_handbook.pdf                             1      yes
+q02   company_handbook.pdf                             1      yes
+q03   product_guide.pdf                                1      yes
+q04   security_policy.pdf                              1      yes
+q05   quarterly_report_q1_2026.pdf                     2      yes
+q06   meeting_notes.pdf                                1      yes
+q07   product_guide.pdf                                2      yes
+q08   product_guide.pdf                                1      yes
+q09   quarterly_report_q1_2026.pdf                     1      yes
+q10   company_handbook.pdf, security_policy.pdf        1      yes
+q11   security_policy.pdf                              1      yes
+q12   company_handbook.pdf, meeting_notes.pdf          1      yes
+q13   company_handbook.pdf, meeting_notes.pdf          1      yes
+q14   product_guide.pdf, meeting_notes.pdf             1      yes
+q15   quarterly_report_q1_2026.pdf, meeting_notes.pdf  1      yes
+q16   product_guide.pdf                                1      yes
+
+16 questions with a label. Hit@5 = 1.00, MRR = 0.94

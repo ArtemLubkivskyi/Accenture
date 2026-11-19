@@ -2,6 +2,7 @@
 
 One question:   uv run python pipeline.py "How many PTO days do employees get?"
 All questions:  uv run python pipeline.py --all   (writes pipeline_outputs.json)
+Other file:     uv run python pipeline.py --test-set pipeline_outputs_cloud.json
 """
 import json
 import sys
@@ -50,7 +51,7 @@ def to_row(q, result):
     }
 
 
-def run_all():
+def run_all(out_file=OUT_FILE):
     with open(QUESTIONS_FILE, encoding="utf-8") as f:
         questions = json.load(f)
 
@@ -64,15 +65,17 @@ def run_all():
         print(f"   [{row['generation_time_ms']} ms, {row['prompt_tokens']} prompt tokens, "
               f"finish={row['finish_reason']}] sources: {sources}\n")
         # save after every question, a full CPU run is slow
-        with open(OUT_FILE, "w", encoding="utf-8") as f:
+        with open(out_file, "w", encoding="utf-8") as f:
             json.dump(rows, f, indent=2, ensure_ascii=False)
 
-    print(f"Saved {len(rows)} rows to {OUT_FILE}")
+    print(f"Saved {len(rows)} rows to {out_file}")
 
 
 if __name__ == "__main__":
     if sys.argv[1:] == ["--all"]:
         run_all()
+    elif len(sys.argv) == 3 and sys.argv[1] == "--test-set":
+        run_all(sys.argv[2])
     else:
         query = " ".join(sys.argv[1:]) or "How many PTO days do employees get?"
         result = answer_question(query)
