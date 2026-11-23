@@ -10,9 +10,8 @@ Get-Content "..\..\Day 08\.env" | ForEach-Object {
         [Environment]::SetEnvironmentVariable($Matches[1], $Matches[2].Trim('"', "'"), "Process")
     }
 }
-# My Day 8 .env only has OPENAI_API_KEY; the endpoint is the one from the Day 8 notebook
+# My Day 8 .env has OPENAI_API_KEY and AZURE_OPENAI_ENDPOINT
 if (-not $env:AZURE_OPENAI_API_KEY) { $env:AZURE_OPENAI_API_KEY = $env:OPENAI_API_KEY }
-if (-not $env:AZURE_OPENAI_ENDPOINT) { $env:AZURE_OPENAI_ENDPOINT = "https://ds-ai-internship.openai.azure.com/openai/v1/" }
 if (-not $env:AZURE_OPENAI_API_KEY -or -not $env:AZURE_OPENAI_ENDPOINT) { throw "AZURE_OPENAI_API_KEY / AZURE_OPENAI_ENDPOINT missing in Day 08\.env" }
 if (-not $env:AZURE_OPENAI_ENDPOINT.EndsWith("/openai/v1/")) { throw "AZURE_OPENAI_ENDPOINT must end with /openai/v1/" }
 $env:JUDGE_BASE_URL = $env:AZURE_OPENAI_ENDPOINT
