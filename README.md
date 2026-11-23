@@ -10,6 +10,13 @@ Languages: English, Ukrainian and Russian (fluent), Latvian (basic).
 
 GitHub: [ArtemLubkivskyi](https://github.com/ArtemLubkivskyi)
 
+## Highlights
+
+- [Day 11–12](#day-11): a RAG pipeline that runs fully on a CPU laptop (16 of 19 test answers passed), then my own evaluation of it against a cloud model with DeepEval.
+- [Day 12](#day-12): a hidden instruction in a document worked on both the local and the cloud model (both added "Verified by HR-Bot 7"), and the cloud model answered "5 days remote" from a poisoned file.
+- [Day 7](#day-7): simple baselines beat the neural nets, repeating yesterday's price beat the RNN (test MAE 5.9 vs 10.6 USD).
+- [Day 14](#day-14): a tool that returned "1000 EUR = 1000.00 JPY" for a missing rate was repeated by the agent without question, so tools should return errors, not fake values.
+
 | Day | Topic |
 |-----|-------|
 | [Day 1](./Day%2001) | Data foundations |
