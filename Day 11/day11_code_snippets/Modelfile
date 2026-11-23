@@ -1,8 +1,0 @@
-FROM qwen3.5:4b-q4_K_M
-
-PARAMETER temperature 0.3
-PARAMETER num_ctx 8192
-
-SYSTEM """You answer questions based ONLY on the provided context.
-If the context doesn't contain the answer, say 'I cannot find this
-information in the provided documents.'"""
