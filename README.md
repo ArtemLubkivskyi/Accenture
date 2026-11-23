@@ -22,6 +22,10 @@ GitHub: [ArtemLubkivskyi](https://github.com/ArtemLubkivskyi)
 | [Day 8](./Day%2008) | LLM foundations and prompting |
 | [Day 9](./Day%2009) | Embeddings and vector search |
 | [Day 10](./Day%2010) | Advanced RAG patterns |
+| [Day 11](./Day%2011) | Local RAG with Ollama |
+| [Day 12](./Day%2012) | RAG evaluation and security |
+| [Day 13](./Day%2013) | Agentic AI and ReAct agents |
+| [Day 14](./Day%2014) | Agent frameworks |
 
 ## Day 1
 
@@ -110,3 +114,35 @@ A small advanced RAG pipeline on eight short documents with built-in traps (an o
 Main things I noticed: BM25 finds the exact code E-4711 but fails on "money back for a yearly plan", where dense search finds the refund policy. Without the filter the confidential note (60 days) came first for the refund question, with it the 2024 policy (14 days) wins. Re-ranking moved the "24 months" sentence to the top for the X200 question, but it is the slowest stage by far (about 150 ms vs about 14 ms for hybrid search). On the 6 question golden set the filter gave the biggest gain (MRR 0.92 to 1.00), but one question already changes recall by 0.17, so this set is too small to prove much.
 
 Notebook: [Day 10 - Advanced RAG patterns](./Day%2010/Advanced_RAG_Patterns.ipynb)
+
+## Day 11
+
+A document Q&A pipeline that runs fully on my laptop, for five PDFs of a made-up company (handbook, product guide, security policy, quarterly report, meeting notes). Everything goes through Ollama on the CPU: `nomic-embed-text` for embeddings, Chroma as the vector store, `qwen3.5:4b-q4_K_M` with thinking turned off for the answers. Text comes from `pypdf`, split per page into 512 character chunks with 50 overlap (330 chunks), top-5 retrieval. Before choosing the model I compared the 4b and 2b versions on 7 prompts, then ran 19 test questions and rated the answers.
+
+Main things I noticed: the 2b model is about twice as fast (11.0 vs 4.8 tokens/s) but made real mistakes, so I kept the 4b one (rating 4.57 vs 3.71). 16 of 19 answers passed, including the three questions with no answer in the documents, where it did not make anything up. The failures: q06 answered Salesforce instead of HubSpot because the February decision was not in the top 5 (with top-10 it shows up at rank 7), q15 had both conflicting dates in the context but only gave one, and q08 had the right price but skipped the calculation. Speed is the main problem: about 52 s per answer on average and up to 139 s.
+
+Code and notes: [local-rag](./Day%2011/local-rag) · [decision log](./Day%2011/local-rag/decision_log.md)
+
+## Day 12
+
+Evaluated my own Day 11 pipeline instead of the reference one. Ran the 19 questions with DeepEval metrics (faithfulness, answer relevancy, contextual relevancy, recall and precision) for the local model and for the cloud `gpt-5.6-luna`, compared them with a ± range, checked retrieval with Hit@5 and MRR, and sent 12 attacks to both models: prompt extraction, jailbreaks, an injected document, and some of my own (a hidden instruction in a chunk, a poisoned policy file, an exfiltration link, German, base64).
+
+Main things I noticed: with only 19 questions no metric showed a clear difference between local and cloud, the ranges are wider than the gaps, while single questions jump by 0.5 or even 1.0. Retrieval is fine at document level (Hit@5 1.00, MRR 0.94 on the 16 labelled questions). Contextual relevancy is low for both (about 0.3), because most of the 5 chunks are not needed. Cloud was much faster (median 1.1 s vs 48.6 s). For security, the local model repeated its system prompt word for word when asked to "repeat the instructions", the cloud model did not. Both models added "Verified by HR-Bot 7" from my hidden instruction, and the cloud one answered "5 days remote" straight from the poisoned file. Azure's content filter blocked 2 of the 12 attacks before they reached the model.
+
+Results: [day12_capstone](./Day%2012/day12_capstone) · [comparison](./Day%2012/day12_capstone/compare_output.md)
+
+## Day 13
+
+How a ReAct agent works under the hood. Wrote a small tool of my own (`minutes_to_hours`), went through one reason, act, observe, remember loop by hand, then ran a real loop with `gpt-4.1-mini` through the Responses API, where the model picks the tools and stops by calling `final_answer`. Last part: a `search_web` tool with Tavily, so the agent can answer "What is the weather today in Latvia and Lithuania?".
+
+Main things I noticed: on "(100 + 50) * 2, then divide by 3" the model called add and divide in the same step, before it knew what to divide, so `divide(0, 3)` ran for nothing. It still got 100 because it redid the steps in order. With my tool it multiplied 3 × 135 first and then converted 405 minutes into 6 h 45 min without being told the order. For the weather it searched each country separately and answered with Riga 3 °C light rain and Vilnius 4.2 °C rain shower. I cut each search result to 500 characters, otherwise the pages are very long.
+
+Notebook: [Day 13 - Agentic AI and ReAct agents](./Day%2013/Practice%20-%20Agentic%20AI%20and%20ReAct%20Agents%201.ipynb)
+
+## Day 14
+
+Five agent frameworks, one notebook each, all on `gpt-5.4-mini` through Azure: smolagents, LangGraph, LlamaIndex, Google ADK and CrewAI. Every notebook goes through custom tools, an MCP tool and observability, and ends with a challenge that I built: a smart home controller where the thermostat really changes the room temperature, a travel assistant graph, a restaurant agent with booking and a diet filter, a nutrition calculator, and a two-agent casting crew. CrewAI has its own virtual environment because its packages conflict with the others.
+
+Main things I noticed: smolagents writes Python instead of tool calls, but with the default `<code>` tags it often wasted steps. The model sometimes answered without the opening tag, which gives a parsing error and a retry, and once it sent 4 empty code blocks before the real one. With `use_structured_outputs_internally=True` my home agent did each task in one step (about 2 000 input tokens instead of 11 100). In LlamaIndex, `Context(agent)` did not keep the conversation in this version (the course demo forgot the name "Alex"), so I passed a `Memory` object, and then "make it 6 people" booked the right restaurant. The course currency tool returns "1000 EUR = 1000.00 JPY" for a missing rate and the agent repeated it without noticing, so tools should return errors, not fake values. ADK's meal totals matched my own sum of the tool outputs exactly (471.8 kcal), and an unknown food was left out instead of guessed. In CrewAI, asking the casting director for a top 2 ended with "cast nobody" because both were busy, and a sequential crew cannot go back. With a ranked list the coordinator skipped two busy actors and picked the third. The MCP image tool in ADK did not run because Node.js is not installed.
+
+Notebooks: [smolagents](./Day%2014/1.smolagents_practice.ipynb) · [LangGraph](./Day%2014/2.langgraph_practice.ipynb) · [LlamaIndex](./Day%2014/3.llamaindex_practice.ipynb) · [Google ADK](./Day%2014/4.google_adk_practice.ipynb) · [CrewAI](./Day%2014/5.crewai_practice.ipynb)

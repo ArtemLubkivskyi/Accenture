@@ -1,0 +1,72 @@
+{
+  "execution_summary": {
+    "start_time": "2026-11-23T07:52:07.962706",
+    "end_time": "2026-11-23T07:52:16.320779",
+    "duration_seconds": 8.36,
+    "total_events": 7
+  },
+  "events": [
+    {
+      "timestamp": "2026-11-23T07:52:07.962711",
+      "event_type": "CREW_START",
+      "agent": "System",
+      "details": {
+        "message": "Crew execution started"
+      }
+    },
+    {
+      "timestamp": "2026-11-23T07:52:07.962828",
+      "event_type": "AGENT_INIT",
+      "agent": "Casting Director",
+      "details": {
+        "tools": [
+          "role_matcher",
+          "fetch_actor_database"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-11-23T07:52:07.962929",
+      "event_type": "AGENT_INIT",
+      "agent": "Schedule Coordinator",
+      "details": {
+        "tools": [
+          "actor_availability_checker"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-11-23T07:52:08.034417",
+      "event_type": "TASK_START",
+      "agent": "Casting Director",
+      "details": {
+        "task": "find actors"
+      }
+    },
+    {
+      "timestamp": "2026-11-23T07:52:13.260773",
+      "event_type": "TASK_COMPLETE",
+      "agent": "Casting Director",
+      "details": {
+        "summary": "1. **Liva Ozola** \u2014 Best fit for Velta\u2019s loneliness and restrained strength; her"
+      }
+    },
+    {
+      "timestamp": "2026-11-23T07:52:16.285948",
+      "event_type": "TASK_COMPLETE",
+      "agent": "Schedule Coordinator",
+      "details": {
+        "summary": "I checked the ranked list in order for the full shooting period **2027-05-01 to "
+      }
+    },
+    {
+      "timestamp": "2026-11-23T07:52:16.320788",
+      "event_type": "CREW_END",
+      "agent": "System",
+      "details": {
+        "message": "Crew execution completed",
+        "duration_seconds": 8.36
+      }
+    }
+  ]
+}
