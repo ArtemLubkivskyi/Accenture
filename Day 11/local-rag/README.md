@@ -39,3 +39,5 @@ AI assistant used: Claude Code (Claude Opus) for writing code. The model inside 
 - `decision_log.md`: my choices and reasoning.
 
 All numbers about speed and accuracy are in `decision_log.md` and come from the two JSON files (printed by `summarize.py`).
+
+The Day 12 evaluation scripts are in this folder too, but their results are in [`Day 12/day12_capstone`](../../Day%2012/day12_capstone).
