@@ -68,6 +68,8 @@ Main things I noticed: customers split nicely into 5 groups and both methods agr
 
 Notebook: [Day 4 - Clustering and PCA practical tasks](./Day%2004/Day4_practice.ipynb)
 
+Lecture demo: [Day 4 - Clustering demo](./Day%2004/Day4_clustering_demo.ipynb) (KMeans by hand, elbow and silhouette, hierarchical clustering, DBSCAN, PCA on iris).
+
 ## Day 5
 
 Text preprocessing with NLTK on the author identification dataset (sentences by Lovecraft, Poe and Shelley). Wrote functions for sentence and word tokenization, stopword and punctuation removal, stemming, lemmatization, a wordcloud and the most common verbs and nouns using POS tags. Then built simple text features (token count, characters, capitals, average word length) and compared XGBoost on them with Naive Bayes and logistic regression on bag of words.
@@ -75,6 +77,8 @@ Text preprocessing with NLTK on the author identification dataset (sentences by 
 Main things I noticed: stemming is fast but gives cut words like "fumbl", lemmas stay real words. The most common verbs are just forms of "be" and "have". Simple text features alone only got about 0.48 accuracy, while bag of words was much better: Naive Bayes 0.84 and logistic regression 0.81 on the test set. Logistic regression overfits (0.98 on train), and trying TF-IDF with different C values only got it to 0.82, so Naive Bayes stayed the best.
 
 Notebook: [Day 5 - Text preprocessing pipeline](./Day%2005/Text_Preprocessing_Pipeline.ipynb)
+
+Second notebook: [Day 5 - Information extraction](./Day%2005/Information_Extraction.ipynb). Regex for simple and complex emails, a regex tokenizer, fuzzy matching with Levenshtein distance, and NER with NLTK and spaCy. All tests pass except the spaCy one: my newer model also tags Chequers as a place. spaCy found more entities than NLTK and kept "Boris Johnson" as one name.
 
 ## Day 6
 
