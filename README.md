@@ -175,6 +175,6 @@ Main things I noticed: telling the CFO agent that "LTV/CAC above 10 looks like f
 
 Notebook: [Day 15 - Startup in a Box](./Day%2015/startup_in_a_box_challenge.ipynb)
 
-The landing page the web agent wrote ([open the live page](https://artemlubkivskyi.github.io/Accenture_AI_engineering_bootcamp/Day%2015/landing_page.html)):
+The landing page the web agent wrote ([live page](https://artemlubkivskyi.github.io/Accenture_AI_engineering_bootcamp/Day%2015/landing_page.html)):
 
 ![Goatly landing page](./Day%2015/landing_page.png)
