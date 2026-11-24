@@ -1,0 +1,238 @@
+{
+  "startup_name": "Goatly",
+  "one_liner": "Friendly rescue goats trim your lawn, eat weeds, and send playful GoatCam updates plus app-based lawn reports.",
+  "target_customers": [
+    "Suburban homeowner, 38, busy with kids and work: wants low-effort lawn maintenance without chemicals.",
+    "Eco-conscious renter or homeowner, 29, small yard or garden: wants a novelty, sustainable alternative to mowing and weeding.",
+    "Short-term rental host, 45, manages multiple properties: needs periodic yard upkeep that looks good in listings."
+  ],
+  "market_insights": {
+    "market_size": "$48B",
+    "growth": "7.5% annual growth",
+    "trends": [
+      "Urban apartment gardening boom",
+      "Gig-economy home services",
+      "Smart-home sensors"
+    ],
+    "risks": [
+      "Trust & safety for in-home visits is especially high here because the service brings animals onto private property and requires handling and containment.",
+      "Seasonal demand can make a biweekly goat-mowing subscription uneven, especially in holidays or bad weather.",
+      "Low willingness to pay is a risk because customers may compare this to cheaper DIY mowing or standard lawn services."
+    ]
+  },
+  "competitors": [
+    {
+      "name": "Leafy Nanny",
+      "their_pricing": "$4.99/month",
+      "their_weakness": "No in-person service",
+      "how_we_win": "We deliver a physical outcome on-site: real weed grazing and lawn mowing, not just advice."
+    },
+    {
+      "name": "DIY lawn care",
+      "their_pricing": "$0 cash cost, plus owner time/equipment",
+      "their_weakness": "Requires labor, equipment, and ongoing maintenance",
+      "how_we_win": "We replace homeowner effort with a subscription service and add novelty plus chemical-free grazing."
+    },
+    {
+      "name": "Traditional lawn mowing services",
+      "their_pricing": "Not provided by tool data",
+      "their_weakness": "Typically uses equipment and chemicals, with less eco/novelty appeal",
+      "how_we_win": "We differentiate with zero-chemical weed control, rescue-animal branding, and GoatCam/lawn-report engagement."
+    }
+  ],
+  "mvp_features": [
+    "P1 Route scheduling for biweekly goat visits and simple customer booking window",
+    "P1 On-site service checklist: fence setup, goat grazing, cleanup, and departure photo",
+    "P1 GoatCam live stream during the visit plus post-visit lawn report in-app",
+    "P2 Basic customer notifications: upcoming visit, arrival, completion",
+    "P2 Simple account management: address, yard notes, pet/safety notes, pause service",
+    "P3 Referral code to encourage neighborhood sign-ups"
+  ],
+  "pricing": {
+    "model": "Subscription billed monthly for a biweekly goat-visit lawn care service",
+    "tiers": [
+      {
+        "tier": "Starter",
+        "price": "$49/month",
+        "includes": "One biweekly goat visit for a small yard, GoatCam access, and a short lawn report"
+      }
+    ]
+  },
+  "unit_economics": {
+    "inputs": {
+      "price_per_month_usd": 49,
+      "cost_to_serve_per_month_usd": 34,
+      "acquisition_cost_usd": 45,
+      "monthly_churn_pct": 8
+    },
+    "gross_margin_per_month_usd": 15.0,
+    "gross_margin_pct": 30.6,
+    "expected_lifetime_months": 12.5,
+    "ltv_usd": 187.5,
+    "ltv_to_cac": 4.17,
+    "cac_payback_months": 3.0,
+    "verdict": "Healthy: investors like LTV/CAC >= 3.",
+    "calculator_runs": 1,
+    "assumptions": "Sector benchmark from home market: typical CAC $30 and churn 8%. Because our price is above the sector average spend of $25/month and the offer includes on-site labor plus live streaming, CAC is assumed higher than benchmark at $45.\n\nPrice per month $49 is set just under the emotional $50 threshold while staying above average home spend.\n\nMonthly cost to serve per customer = $34, built line by line:\n- People time: $14 for herd wrangling, site setup, grazing supervision, cleanup, and customer support.\n- Transport: $8 for fuel, vehicle wear, and moving the herd/equipment.\n- Materials: $7 for temporary fencing, water, treats, waste bags, and basic yard protection supplies.\n- Insurance: $3 for liability coverage allocation for each active customer.\n- Software: $2 for booking, GoatCam hosting, messaging, and report generation.\n\nWhy these numbers changed from the market benchmark: we did not change churn because the home-sector benchmark already fits the product category. We raised CAC from $30 to $45 because the service is more expensive than the $25 average home spend and requires trust, scheduling, and in-person delivery. We kept cost to serve at $34 to reflect a thin but realistic service margin for a physical subscription. The result is LTV/CAC 4.17, which sits in the believable 3 to 8 range."
+  },
+  "marketing_campaign": {
+    "slogan": "No lawn? No problem. Goatly.",
+    "launch_channels": [
+      "Nextdoor neighborhood posts and local Facebook groups",
+      "Partner with eco-friendly realtors, Airbnb hosts, and property managers",
+      "Flyers at farmers markets, garden centers, and pet stores",
+      "Local PR: pitch 'the goats are coming' story to city papers and morning shows"
+    ],
+    "social_posts": [
+      "Instagram: Your lawn just got a very weird upgrade. 🐐✨ Goatly sends rescue goats to snack the weeds, trim the grass, and livestream the chaos on GoatCam. Zero chemicals. Maximum bleats. Join the waitlist.",
+      "TikTok: POV: you hired goats instead of mowing again. They arrive, judge your yard, eat the clover, and file a lawn report like tiny fuzzy consultants. Goatly is now booking biweekly visits for small yards.",
+      "Facebook: Busy week? Let the goats handle the lawn. Goatly is a subscription service for chemical-free grazing, live GoatCam, and a post-visit lawn report written by the herd. Perfect for families, renters, and rental hosts.",
+      "X: We turned lawn care into a rescue-goat subscription. Biweekly visits. No chemicals. Live GoatCam. Playful lawn reports. Slightly more adorable than a mower, slightly less annoying than weeds."
+    ],
+    "launch_stunt": "The Great Goat Takeover: park a branded goat pen on the busiest neighborhood lawn, livestream it as a 2-hour 'public demo,' and invite locals to submit their worst weed patches for a free goat makeover raffle. Winners get a visit plus a printed lawn report signed 'Hoof-Approved.'"
+  },
+  "investor_pitch": {
+    "slides": [
+      "Problem: Lawn care is time-consuming, chemical-heavy, and easy to defer for busy suburban homeowners who want a small yard to look good without mowing, weeding, or spraying. Goatly’s beachhead is a single pilot neighborhood of homeowners with kids and work who want a low-effort, chemical-free result. The execution risk is real: private-property animal visits require trust and safety, plus scheduling and seasonal reliability. So the first question is not whether goats are charming—it’s whether one route can work with repeatable operations and acceptable economics.",
+      "Solution: Goatly is a subscription where friendly rescue goats visit a customer’s garden every two weeks to mow grass and eat weeds with zero chemicals. The MVP ships as a tight service loop: route scheduling and booking, an on-site checklist for fence setup, grazing, cleanup, and departure photo, GoatCam live stream during the visit, and a short lawn report in the app. We also include simple customer notifications plus address, yard, pet/safety notes, and pause-service controls.",
+      "Market: The lawn care market is a $48B category growing 7.5% annually. Goatly enters through one sharply defined beachhead: one pilot neighborhood of suburban homeowners, with expansion later to eco-conscious renters/homeowners with small yards and short-term rental hosts. The macro tailwinds are real—gig-economy home services, urban apartment gardening, and smart-home sensors—but the first proof point is local route density, not broad category enthusiasm.",
+      "Business Model with Unit Economics: Goatly charges $49/month for one biweekly goat visit for a small yard, plus GoatCam access and a short lawn report. The current modeled cost to serve is $34/month: $14 people time, $8 transport, $7 materials, $3 insurance, and $2 software. That implies $15 gross margin per customer per month and 30.6% gross margin. With $45 CAC and 8% monthly churn, modeled LTV is $187.5, LTV/CAC is 4.17, and CAC payback is 3.0 months. Version 3 is about replacing model inputs with pilot measurements: actual cost per visit, route density, service time, CAC by channel, and retention after renewal.",
+      "Go-to-Market and 90-Day Plan: Go-to-market for the first 90 days is intentionally narrow: one pilot neighborhood, one primary acquisition channel, one operating playbook. Primary channel: Nextdoor neighborhood posts, supported by local Facebook groups. The 90-day plan is to ship booking, checklist, GoatCam, reports, notifications, and pause-service controls; sign and serve 20 paying customers in that one neighborhood at $49/month; measure actual cost per visit, route density, service time, and before/after lawn outcomes; and track retention through at least one renewal cycle. The Great Goat Takeover stunt is reserved as a local waitlist generator, not the core acquisition engine.",
+      "Team Ask: The ask is for help validating the first repeatable neighborhood route. We are not asking investors to believe the assumptions; we are asking them to support the 90-day proof plan that will replace assumptions with verified data. Success means one neighborhood route with 20 paying customers, under-$34 cost to serve in practice, measurable retention after renewal, and an operational trust-and-safety playbook for private-property goat visits."
+    ],
+    "closing_line": "Goatly makes lawn care chemical-free, memorable, and measurable—one neighborhood route, one primary channel, one biweekly visit at a time."
+  },
+  "investor_feedback": {
+    "score_path": [
+      6.33,
+      7.0,
+      7.0
+    ],
+    "stopped_because": "hit the limit of 3 rounds",
+    "rounds": [
+      {
+        "round": 1,
+        "average_score": 6.33,
+        "verdicts": [
+          {
+            "investor": "Ada Okafor",
+            "score": 6,
+            "decision": "maybe",
+            "liked": "The concept is instantly memorable, visually strong, and the niche is clear enough to test locally. I like the subscription framing, the concrete monthly price, and that you’ve at least attempted unit economics with CAC, churn, margin, and payback. The local, route-based launch plan is sensible for a service business.",
+            "concern": "Show me the numbers. The economics are only as good as the assumptions, and those assumptions look thin for a live-animal, trust-and-safety-heavy operation. $3 insurance and $8 transport feel hand-wavy, and 8% monthly churn for a quirky lawn service may be optimistic. Also, the market is broad at $48B, but your actual initial segment is much smaller, and it’s unclear how defensible this is beyond novelty and local branding.",
+            "must_fix": "Prove the first-route unit economics with a pilot: track real costs per visit, actual churn/retention, and CAC by channel for at least 20 paying customers, then update the model with verified data before pitching scale."
+          },
+          {
+            "investor": "Rex Moon",
+            "score": 7,
+            "decision": "maybe",
+            "liked": "This is unforgettable. Goatly has a real category-creating vibe: chemical-free lawn care with rescue goats is vivid, press-worthy, and immediately understandable. The storytelling is strong, the customer use case is clear, and the MVP is sensibly scoped around booking, routing, and service ops.",
+            "concern": "The biggest risk is not demand, it’s execution and economics. Private-property animal service introduces heavy operational, trust-and-safety, zoning, insurance, and seasonal constraints. The unit economics read plausible on paper, but they feel hand-wavy without evidence that routes can stay dense enough and goats can reliably perform across different yard sizes and geographies. Will this change how people live? Maybe—but only if it becomes a repeatable service, not a viral stunt.",
+            "must_fix": "Prove route density with one real pilot: show 10 paying customers on one neighborhood route with actual costs, service time, insurance terms, and before/after lawn outcomes. That would turn this from clever into investable."
+          },
+          {
+            "investor": "Priya Shah",
+            "score": 6,
+            "decision": "maybe",
+            "liked": "Clear, memorable wedge with an easy-to-grasp demo effect. The MVP is reasonably defined, and the 90-day plan at least names real operational work: booking, checklist, trust/safety, and a local pilot. I also like that you included unit economics instead of hand-waving.",
+            "concern": "The target customer is still too broad and the business feels more like a stunt than a repeatable service. I’m not convinced a goat-based lawn subscription scales cleanly, and the pitch doesn’t show enough proof that enough customers will pay $49/month versus standard lawn care. The route economics also hinge on assumptions that feel fragile: utilization, insurance, animal handling, and seasonal demand.",
+            "must_fix": "Narrow to one beachhead customer with a concrete pilot geography and one measurable outcome for the first 90 days—for example, 20 suburban homeowners in one neighborhood with a signed pilot price, retention target, and service frequency proof."
+          }
+        ],
+        "changes_in_this_pitch": []
+      },
+      {
+        "round": 2,
+        "average_score": 7.0,
+        "verdicts": [
+          {
+            "investor": "Ada Okafor",
+            "score": 7,
+            "decision": "maybe",
+            "liked": "This is materially better than version 1. You listened: the pitch is now focused on a pilot route, has a concrete 90-day plan, and the unit economics are spelled out with explicit assumptions. I also like that you acknowledged the trust-and-safety and seasonal execution risk instead of pretending it doesn’t exist. Show me the numbers.",
+            "concern": "The numbers are still mostly assumed, not proven. $49/month for biweekly goat visits looks thin once you include real labor, transport, animal handling, insurance, scheduling, and downtime risk; I don’t yet believe the 30.6% margin without pilot data. The market framing is also a bit broad and mixed with unrelated segments, while the beachhead is very small. The moat is unclear beyond a stunt and operational novelty.",
+            "must_fix": "Before raising more money, report verified pilot data for 20 paying customers: actual cost per visit, route density, gross margin, CAC by channel, and 90-day retention, then replace the assumed model with those realized metrics."
+          },
+          {
+            "investor": "Rex Moon",
+            "score": 7,
+            "decision": "maybe",
+            "liked": "You fixed the biggest prior gap: this is now anchored to a real neighborhood route, with explicit pilot milestones, unit economics, and a tighter MVP. The pitch also feels more investable because it treats trust/safety and route density as the core problem, not just the goats-as-gimmick. Nice move on making the service measurable with GoatCam, checklists, and before/after outcomes.",
+            "concern": "It still reads more like a clever stunt than a proven durable business. I don’t yet see evidence that one neighborhood route actually works profitably, or that homeowners will keep paying once the novelty fades. Also, the market framing is still broad and a bit buzzwordy, which dilutes the sharpness of the beachhead. Will this change how people live? Not yet proven.",
+            "must_fix": "Replace the assumptions with pilot proof from one actual neighborhood route: show 10+ paying customers, real route density, actual cost per visit, service time, insurance terms, and before/after lawn results with retention after at least one renewal cycle."
+          },
+          {
+            "investor": "Priya Shah",
+            "score": 7,
+            "decision": "maybe",
+            "liked": "This is materially tighter than last time: you’ve now named one beachhead customer, one pilot geography, a specific 90-day target of 20 paying homeowners, and a clear operating test around route economics, service time, and retention. The MVP is also more concrete, and I like that you’re treating the first phase as proof of a route, not a vague category play. What ships in the first 90 days? You actually answered it.",
+            "concern": "The pitch still feels a bit stunt-led and channel-bloated for a first route. You list too many acquisition paths before proving one repeatable channel, and the economics are still assumptions until the pilot shows real density and labor costs. Also, the customer is better defined, but the neighborhood itself is still unspecified, so the pilot is not yet operationally grounded enough for me to believe execution risk is under control.",
+            "must_fix": "Pick one concrete pilot neighborhood and one primary acquisition channel for the first 90 days, and commit to a signed target metric there (for example: 20 customers from Nextdoor in [specific neighborhood] at $49/month with under-$34 cost to serve)."
+          }
+        ],
+        "changes_in_this_pitch": [
+          "Ada Okafor asked to show the numbers: I reframed the business model slide to emphasize that the current unit economics are assumptions to be verified in-pilot, and I changed the 90-day plan to collect real cost, retention, and CAC data from 20 paying customers instead of claiming scale.",
+          "Rex Moon asked to prove route density and operational feasibility: I narrowed the pitch to one pilot neighborhood route and added measurable outputs for actual route density, service time, insurance/trust-and-safety execution, and before/after lawn outcomes.",
+          "Priya Shah asked for a tighter beachhead and concrete first-90-day milestone: I narrowed the target to suburban homeowners in one neighborhood and made the 90-day plan specific—20 paying customers, launch the MVP flow, and prove repeatable service and retention before expanding."
+        ]
+      },
+      {
+        "round": 3,
+        "average_score": 7.0,
+        "verdicts": [
+          {
+            "investor": "Ada Okafor",
+            "score": 7,
+            "decision": "maybe",
+            "liked": "Much better discipline than last time: clear beachhead, a focused 90-day pilot plan, and the unit economics are finally written down with CAC, churn, payback, and gross margin. I also like that you narrowed the acquisition plan to one channel and explicitly say the model will be replaced by pilot data. Show me the numbers.",
+            "concern": "This still reads like a spreadsheet story more than a proven business. The market is big, but the beachhead is tiny and the economics are still modeled, not verified. Biggest risk is operational fragility: trust-and-safety, seasonality, route density, and service reliability could blow up the 30.6% gross margin quickly. The pitch says the right words, but it still doesn’t prove that repeatable neighborhood routes actually work.",
+            "must_fix": "Report one real pilot cohort with measured results for 20 paying customers: actual monthly revenue collected, actual cost per visit, churn/renewal after one cycle, and CAC by channel, then update the LTV/CAC model using those observed numbers instead of assumptions."
+          },
+          {
+            "investor": "Rex Moon",
+            "score": 7,
+            "decision": "maybe",
+            "liked": "You did real work here: the pitch is tighter, more credible, and much less hand-wavy. I like the narrow beachhead, the explicit 90-day proof plan, and that you’re now talking in operational terms—route density, service time, insurance, retention, and a trust-and-safety playbook. The unit economics are also laid out cleanly, which helps me see the shape of the business.",
+            "concern": "This is still mostly a well-structured plan, not proof. You say version 3 will replace assumptions with pilot measurements, but the only evidence in the pitch is modeled economics and a pilot target. I still don’t know if homeowners will actually let goats onto their property at scale, whether the economics work after real handling time and insurance, or whether this is a delightful novelty rather than a repeatable category. Will this change how people live? Not yet proven.",
+            "must_fix": "Bring back one actual neighborhood result: 10+ paying customers served, real measured cost per visit and service time, specific insurance/trespass terms, and before/after lawn photos with at least one renewal cycle of retention."
+          },
+          {
+            "investor": "Priya Shah",
+            "score": 7,
+            "decision": "maybe",
+            "liked": "You fixed the biggest issue: the first 90 days are now sharply defined around one pilot neighborhood, one primary channel (Nextdoor), and a concrete target of 20 paying customers at $49/month. I also like that you’ve turned the MVP into a service loop with only the essentials, and you’re explicitly saying the goal is to replace assumptions with measured route economics.",
+            "concern": "The pitch is still carrying too much operational risk for a first check: private-property animal visits, trust/safety, scheduling, seasonal reliability, and route density are all hand-waved into a future playbook. Also, the MVP list is starting to creep again with GoatCam, reports, notifications, pause controls, and app features—useful, but still a lot for a neighborhood pilot. I still don’t know what the signed target neighborhood is or why this one route is likely to work better than any other.",
+            "must_fix": "Name the exact pilot neighborhood and add one hard operating milestone tied to it, e.g. ‘20 signed customers in [neighborhood], serviced on a single weekly route with under-30-minute average drive time between stops and zero safety incidents.’"
+          }
+        ],
+        "changes_in_this_pitch": [
+          "Changed the market framing to stay focused on the $48B lawn care category and one concrete beachhead neighborhood, addressing the concern that the prior framing was too broad and buzzwordy (Ada Okafor, Rex Moon).",
+          "Made the first 90 days operationally specific by naming one primary acquisition channel—Nextdoor neighborhood posts in the pilot neighborhood—rather than listing many channels up front, addressing Priya Shah’s concern about channel bloat.",
+          "Specified the pilot as one neighborhood route with a target of 20 paying customers at $49/month, directly aligning with the requested proof milestone from Ada Okafor and Priya Shah.",
+          "Kept the unit economics model explicit but reframed it as a model to be tested, not evidence, and stated the exact metrics the pilot must verify: actual cost per visit, route density, service time, CAC by channel, and retention after renewal, addressing Ada Okafor and Rex Moon’s concern about assumed numbers.",
+          "Tightened the MVP to only the P1/P2 operational features needed for the first route, avoiding feature bloat and reinforcing a realistic first-shipped product for Priya Shah.",
+          "Repositioned the Great Goat Takeover stunt as a secondary waitlist generator rather than the main growth strategy, addressing the concern that the pitch felt stunt-led.",
+          "Updated the team ask to focus on proving a durable operating model and trust-and-safety playbook instead of asking for scale prematurely, answering all three investors’ calls for proof before expansion."
+        ]
+      }
+    ]
+  },
+  "name_check": {
+    "why_this_name": "It’s short, playful, easy to say, and directly hints at goats without sounding generic; the availability check looks clean with low trademark risk.",
+    "names_rejected": [],
+    "tool_result_for_chosen_name": {
+      "name": "Goatly",
+      "domain_com": "goatly.com is available",
+      "domain_ai": "goatly.ai is available",
+      "trademark_risk": "low",
+      "verdict": "Looks usable!"
+    },
+    "founder": "auto-approved (FOUNDER_IN_THE_LOOP is off)"
+  },
+  "run_stats": {
+    "llm_calls": 25,
+    "tool_calls": 11,
+    "tokens": 43379,
+    "wall_seconds": 55.5
+  }
+}
