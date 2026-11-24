@@ -88,6 +88,8 @@ Notebook: [Day 6 - NN from scratch task 1](./Day%2006/NN_from_scratch_task_nr_1_
 
 A deeper NumPy network on MNIST (784 → 30 → 20 → 15 → 10, ReLU hidden layers, softmax output), trained with full batch gradient descent. Filled in forward and backward propagation, the parameter updates and the training loop, then evaluation with a confusion matrix, plots of the misclassified digits and saliency maps showing which pixels push the loss the most.
 
+Main things I noticed: after 3000 iterations the network gets 79.1% on train and 79.4% on test, so it does not overfit, it just does not learn enough, and the cost went down to about 0.016 and then jumped back to 0.065 at the end (once even to 0.21), so a learning rate of 0.9 looks too high. The most common test mistakes are 9 read as 7 (299 times), 3 as 8 (249) and 7 as 9 (192). The saliency maps were hard to read, in most of the 80 mistakes the gradient is only a faint haze around the stroke.
+
 Notebook: [Day 6 - NN from scratch on MNIST task 2](./Day%2006/NN_From_Scratch_on_MNIST_task_nr_2_excercise.ipynb)
 
 ## Day 7
