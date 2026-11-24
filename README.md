@@ -17,6 +17,8 @@ GitHub: [ArtemLubkivskyi](https://github.com/ArtemLubkivskyi)
 - [Day 7](#day-7): simple baselines beat the neural nets, repeating yesterday's price beat the RNN (test MAE 5.9 vs 10.6 USD).
 - [Day 14](#day-14): a tool that returned "1000 EUR = 1000.00 JPY" for a missing rate was repeated by the agent without question, so tools should return errors, not fake values.
 
+## Days
+
 | Day | Topic |
 |-----|-------|
 | [Day 1](./Day%2001) | Data foundations |
