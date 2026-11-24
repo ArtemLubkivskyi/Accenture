@@ -169,12 +169,12 @@ Notebooks: [smolagents](./Day%2014/1.smolagents_practice.ipynb) · [LangGraph](.
 
 ## Day 15
 
-A multi-agent "venture studio" in LangGraph that turns one idea into a full launch kit: name, market, competitors, MVP, pricing, unit economics, campaign, pitch and a landing page. My own idea: Goats-as-a-Service, rescue goats that mow your lawn while you watch them on a GoatCam. Market research and naming run in parallel, then the work goes market → product → campaign → pitch, and three investor agents (Ada, Rex, Priya) score the pitch and send it back for up to 3 rounds. One run is about 25–26 LLM calls and a minute, and it saves the [landing page](./Day%2015/landing_page.html) and the [launch kit](./Day%2015/launch_kit.json) as files.
+A multi-agent "venture studio" in LangGraph that turns one idea into a full launch kit: name, market, competitors, MVP, pricing, unit economics, campaign, pitch and a landing page. My own idea: Goats-as-a-Service, rescue goats that mow your lawn while you watch them on a GoatCam. Market research and naming run in parallel, then the work goes market → product → campaign → pitch, and three investor agents (Ada, Rex, Priya) score the pitch and send it back for up to 3 rounds. One run is about 25–26 LLM calls and a minute, and it saves the [landing page](https://artemlubkivskyi.github.io/Accenture_AI_engineering_bootcamp/Day%2015/landing_page.html) and the [launch kit](./Day%2015/launch_kit.json) as files.
 
 Main things I noticed: telling the CFO agent that "LTV/CAC above 10 looks like fantasy" made it worse (16 → 37.9), and only a hard range of 3–8 with a recalculation rule gave believable numbers, but then it landed on exactly 8.0, the edge of the range. In one run the investors asked to see the cost broken down, and the pitch couldn't do it because my brief passed the calculator result to the pitch writer but not the cost lines. After one line of code the slide showed $24 + $10 + $9 + $5 + $3 = $51. The best average in 5 runs was 7.67, never 8, because Ada keeps asking for real pilot data, and the pitch writer is not allowed to make it up. I also scored the same final pitch 3 times per investor: Priya gave 6, 8 and 7 to identical text, and the average without memory was 6.44 instead of 7.0, so part of the loop's progress is the judges rewarding "you did what I asked". The numbers always matched the calculator, but nobody checked that they were real: $14 a month for people means about $6.50 per goat visit.
 
 Notebook: [Day 15 - Startup in a Box](./Day%2015/startup_in_a_box_challenge.ipynb)
 
-The landing page the web agent wrote ([HTML](./Day%2015/landing_page.html)):
+The landing page the web agent wrote ([open the live page](https://artemlubkivskyi.github.io/Accenture_AI_engineering_bootcamp/Day%2015/landing_page.html)):
 
 ![Goatly landing page](./Day%2015/landing_page.png)
