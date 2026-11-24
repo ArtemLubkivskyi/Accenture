@@ -35,6 +35,7 @@ GitHub: [ArtemLubkivskyi](https://github.com/ArtemLubkivskyi)
 | [Day 12](./Day%2012) | RAG evaluation and security |
 | [Day 13](./Day%2013) | Agentic AI and ReAct agents |
 | [Day 14](./Day%2014) | Agent frameworks |
+| [Day 15](./Day%2015) | Multi-agent challenge: Startup in a Box |
 
 ## Day 1
 
@@ -165,3 +166,11 @@ Five agent frameworks, one notebook each, all on `gpt-5.4-mini` through Azure: s
 Main things I noticed: smolagents writes Python instead of tool calls, but with the default `<code>` tags it often wasted steps. The model sometimes answered without the opening tag, which gives a parsing error and a retry, and once it sent 4 empty code blocks before the real one. With `use_structured_outputs_internally=True` my home agent did each task in one step (about 2 000 input tokens instead of 11 100). In LlamaIndex, `Context(agent)` did not keep the conversation in this version (the course demo forgot the name "Alex"), so I passed a `Memory` object, and then "make it 6 people" booked the right restaurant. The course currency tool returns "1000 EUR = 1000.00 JPY" for a missing rate and the agent repeated it without noticing, so tools should return errors, not fake values. ADK's meal totals matched my own sum of the tool outputs exactly (471.8 kcal), and an unknown food was left out instead of guessed. In CrewAI, asking the casting director for a top 2 ended with "cast nobody" because both were busy, and a sequential crew cannot go back. With a ranked list the coordinator skipped two busy actors and picked the third. The MCP image tool in ADK did not run because Node.js is not installed.
 
 Notebooks: [smolagents](./Day%2014/1.smolagents_practice.ipynb) · [LangGraph](./Day%2014/2.langgraph_practice.ipynb) · [LlamaIndex](./Day%2014/3.llamaindex_practice.ipynb) · [Google ADK](./Day%2014/4.google_adk_practice.ipynb) · [CrewAI](./Day%2014/5.crewai_practice.ipynb)
+
+## Day 15
+
+A multi-agent "venture studio" in LangGraph that turns one idea into a full launch kit: name, market, competitors, MVP, pricing, unit economics, campaign, pitch and a landing page. My own idea: Goats-as-a-Service, rescue goats that mow your lawn while you watch them on a GoatCam. Market research and naming run in parallel, then the work goes market → product → campaign → pitch, and three investor agents (Ada, Rex, Priya) score the pitch and send it back for up to 3 rounds. One run is about 26 LLM calls and a minute.
+
+Main things I noticed: telling the CFO agent that "LTV/CAC above 10 looks like fantasy" made it worse (16 → 37.9), and only a hard range of 3–8 with a recalculation rule gave believable numbers, but then it landed on exactly 8.0, the edge of the range. In one run the investors asked to see the cost broken down, and the pitch couldn't do it because my brief passed the calculator result to the pitch writer but not the cost lines. After one line of code the slide showed $24 + $10 + $9 + $5 + $3 = $51. The best average in 4 runs was 7.67, never 8, because Ada keeps asking for real pilot data, and the pitch writer is not allowed to make it up.
+
+Notebook: [Day 15 - Startup in a Box](./Day%2015/startup_in_a_box_challenge.ipynb)
